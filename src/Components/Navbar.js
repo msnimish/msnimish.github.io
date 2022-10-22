@@ -3,10 +3,11 @@ import React from 'react'
 
 export const Navbar = () => {
   return (
-    <Container p={2} bg={"#331651"} maxW={"100%"} color={"white"} >
-        <Flex w={"80%"} justifyContent={"space-between"} bg={"#331651"} m={"auto"}>
+    <Container p={2} bg={"#331651"} color={"white"}  pos="fixed" w="100%" top={5}>
+        <Flex w={"80%"} justifyContent={"space-between"}  m={"auto"}>
             <Box>
-                <Image src="./Images/msn-logo.png"></Image>
+                {/* <Image src="./Images/msn-logo.png"></Image> */}
+                <Text>MSN</Text>
             </Box>
             <HStack gap={"20px"}>
                 <Text color={"white"}>Home</Text>
