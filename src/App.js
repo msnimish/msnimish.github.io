@@ -1,4 +1,3 @@
-import { Container } from "@chakra-ui/react";
 import About from "./Components/About";
 import Chatbot from "./Components/Chatbot";
 import Contact from "./Components/Contact";
@@ -9,11 +8,16 @@ import { Navbar } from "./Components/Navbar";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 import Stats from "./Components/Stats";
+import styled from "styled-components";
+
+const Container = styled.div`
+  max-width: 100%;
+`;
 
 function App() {
   return (
-    <Container maxW={"100vw"} p={"0px"}>
-      <Navbar maxW={"100vw"}></Navbar>
+    <Container>
+      <Navbar></Navbar>
       {/* <Dummy></Dummy> */}
       <Home></Home>
       <About></About>
