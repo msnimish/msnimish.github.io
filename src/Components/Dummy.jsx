@@ -1,9 +1,17 @@
-import { Container } from '@chakra-ui/react'
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from './Home'
+import Projects from './Projects'
 
 const Dummy = () => {
   return (
-    <Container height={"1000px"} bg={"red"}> Hello</Container>
+    <div>
+      
+      {/* <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/projects" element={<Projects/>}></Route>
+      </Routes> */}
+    </div>
   )
 }
 

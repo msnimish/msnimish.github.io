@@ -17,16 +17,18 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <Navbar></Navbar>
-      {/* <Dummy></Dummy> */}
+      <Navbar style={{position:"sticky", top:"0"}}></Navbar>
       <Home></Home>
       <About></About>
       <Skills></Skills>
       <Projects></Projects>
       <Stats></Stats>
-      {/* <Contact></Contact> */}
+      <Contact></Contact>
       <Footer></Footer>
       <Chatbot></Chatbot>
+      <Dummy>
+        <img src="./Images/hero.svg" alt="fullPage"></img>
+      </Dummy>
     </Container>
   );
 }
