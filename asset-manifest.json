@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.426976d0.js",
-    "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
+    "main.css": "/static/css/main.cb881e80.css",
+    "main.js": "/static/js/main.a583fb24.js",
+    "static/media/Portfolio.svg": "/static/media/Portfolio.5cf172cf11da19fb09ad43de6a00a514.svg",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.3faa3eef13649db02044.ttf",
+    "static/media/ProfilePic.svg": "/static/media/ProfilePic.5d3e4fd3b67b50b751dced3238d1bcd7.svg",
+    "static/media/heroAbout.jpg": "/static/media/heroAbout.acd9a6d275ed7991b92b.jpg",
+    "static/media/msn-logo.png": "/static/media/msn-logo.5a5c03e49c52683a9eec.png",
+    "static/media/MSN.svg": "/static/media/MSN.130d82ed1abb941cae393d5709ae5cf0.svg",
+    "static/media/AboutBG.svg": "/static/media/AboutBG.d46159686cd5fc1885fba6c11c3bf04d.svg",
     "index.html": "/index.html",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.426976d0.js.map": "/static/js/main.426976d0.js.map",
-    "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
+    "main.cb881e80.css.map": "/static/css/main.cb881e80.css.map",
+    "main.a583fb24.js.map": "/static/js/main.a583fb24.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.426976d0.js"
+    "static/css/main.cb881e80.css",
+    "static/js/main.a583fb24.js"
   ]
 }
