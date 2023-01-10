@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
+@font-face{
+  font-family: 'Montserrat';
+  src: local("Montserrat"), url("./Assets/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+/* static/Montserrat-Thin.ttf
+  static/Montserrat-ExtraLight.ttf
+  static/Montserrat-Light.ttf
+  static/Montserrat-Regular.ttf
+  static/Montserrat-Medium.ttf
+  static/Montserrat-SemiBold.ttf
+  static/Montserrat-Bold.ttf
+  static/Montserrat-ExtraBold.ttf
+  static/Montserrat-Black.ttf */
 
 body {
   margin: 0;
