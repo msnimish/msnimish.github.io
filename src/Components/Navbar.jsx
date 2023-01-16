@@ -32,7 +32,7 @@ const Nav = styled.div`
 
   .navContainer {
     background-color: #331551;
-    height: 80px;
+    height: 60px;
     width: 100%;
   }
   .navWrapper {
@@ -51,12 +51,14 @@ const Nav = styled.div`
     display: flex;
     flex-direction:row;
     gap: 50px;
+    margin-left:130px;
   }
   .navLogo {
-    width:8.25em;
+    margin-top:5px;
+    width:6em;
   }
 
-  @media all and (min-width: 769px) and (max-width: 992px){
+  @media all and (min-width: 768px) and (max-width: 992px){
     font-size: 0.8em;
     .navWrapper{
       width:90vw;
@@ -66,7 +68,7 @@ const Nav = styled.div`
     }
   }
 
-  @media all and (min-width: 220px) and (max-width: 768px){
+  @media all and (min-width: 220px) and (max-width: 767px){
     font-size: 0.8em;
     .navWrapper{
       width:90vw;
@@ -120,7 +122,7 @@ export const Navbar = () => {
 
               <DrawerBody>
                 <Flex flexDir={"column"} h="70%" gap="20px" fontWeight={"600"}>
-                  <Box outline="1px solid white">Home</Box>
+                  <Box>Home</Box>
                   <Box>About</Box>
                   <Box>Skills</Box>
                   <Box>Projects</Box>
@@ -141,7 +143,7 @@ export const Navbar = () => {
                     backgroundColor: "white",
                     color: "secondary.500",
                   }}
-                  fontSize={{base:"1em", md:"1.25em"}}
+                  fontSize={{base:"1em", md:"1em"}}
                   bg={"secondary.500"}
                   color="white"
                 >
@@ -164,7 +166,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1.25em"
+              fontSize="1em"
             >
               Home
             </Button>
@@ -175,7 +177,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1.25em"
+              fontSize="1em"
             >
               About
             </Button>
@@ -186,7 +188,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1.25em"
+              fontSize="1em"
             >
               Skills
             </Button>
@@ -197,7 +199,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1.25em"
+              fontSize="1em"
             >
               Projects
             </Button>
@@ -208,7 +210,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1.25em"
+              fontSize="1em"
             >
               Contact
             </Button>
@@ -228,7 +230,7 @@ export const Navbar = () => {
               backgroundColor: "white",
               color: "secondary.500",
             }}
-            fontSize="1.25em"
+            fontSize="1em"
             bg={"secondary.500"}
             color="white"
           >

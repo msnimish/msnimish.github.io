@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import heroImg from "../Assets/Images/heroAbout.jpg";
+import heroImg from "../Assets/Images/hero.svg";
 import { TypeAnimation } from "react-type-animation";
 
 const IntroWrapper = styled.div`
@@ -19,21 +19,22 @@ const IntroWrapper = styled.div`
     width: 100%;
     margin:auto;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     // border: 1px solid;
   }
   .descriptionBox{
     width: 45vw;
+    height: 45vh;
   }
   .greetings{
-    font-size: 3em;
+    font-size: 2em;
     font-family: "Montserrat ExtraBold", "Times New Roman";
     margin:0px;
     color: #331551
   }
   .name{
     font-family: "Montserrat ExtraBold", "Times New Roman";
-    font-size: 3.5em;
+    font-size: 2.5em;
     background-size: 100%,
     background-clip: text;
     text-fill-color: transparent;
@@ -44,21 +45,32 @@ const IntroWrapper = styled.div`
     background-image: -webkit-linear-gradient(120deg, #F89337,#BF3130);
   }
   .role{
+    width: 60%;
     font-family: "Montserrat ExtraBold", "Times New Roman";
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0px;
     color: #331551;
+    z-index:10;
     // outline: 1px solid blue;    
   }
 
   .heroImageContainer{
     width: 50%,
     object-fit: fill;
+
+    // visibility:hidden;
   }
 
   .heroImageContainer>img{
-    width: 120%;
-    height: 100%;
+    width: 50%;
+    // height: 20%;
+    // display: none;
+    position: absolute;
+    top: 120px;
+    left: 40%;
+    z-index:5;
+    // outline: 1px solid green;
+    // visibility:hidden;
   }
 
 
@@ -69,6 +81,10 @@ const IntroWrapper = styled.div`
     .introContent{
       margin: 5vw auto;
     }
+  }
+  @media all and (min-width: 220px) and (max-width: 768px){
+    font-size: 0.8em;
+    
   }
 `;
 
@@ -94,8 +110,8 @@ const Intro = () => {
               />
             </div>
           </div>
-          <div className="heroImageContainer">
-            <img src={heroImg} alt="heroImage"/>
+          <div className="heroImageContainer" >
+            <img src={heroImg} alt="heroImage" />
           </div>
         </div>
       </div>
