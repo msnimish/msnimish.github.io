@@ -23,12 +23,12 @@ function App() {
       <Navbar style={{ position: "sticky", top: "0" }}></Navbar>
       <Intro></Intro>
       <About></About>
-      <Skills></Skills>
+      {/* <Skills></Skills>
       <Projects></Projects>
       <Stats></Stats>
       <Contact></Contact>
       <Footer></Footer>
-      <Chatbot></Chatbot>
+      <Chatbot></Chatbot> */}
       {/* <Dummy></Dummy> */}
     </PageContainer>
   );

@@ -32,7 +32,7 @@ const Nav = styled.div`
 
   .navContainer {
     background-color: #331551;
-    height: 60px;
+    height: 10vh;
     width: 100%;
   }
   .navWrapper {
@@ -51,7 +51,7 @@ const Nav = styled.div`
     display: flex;
     flex-direction:row;
     gap: 50px;
-    margin-left:130px;
+    margin-left:7.5em;
   }
   .navLogo {
     margin-top:5px;
@@ -143,7 +143,7 @@ export const Navbar = () => {
                     backgroundColor: "white",
                     color: "secondary.500",
                   }}
-                  fontSize={{base:"1em", md:"1em"}}
+                  fontSize={{base:"1.2em", md:"1.2em"}}
                   bg={"secondary.500"}
                   color="white"
                 >
@@ -156,7 +156,7 @@ export const Navbar = () => {
             src={Logo}
             className="navLogo"
             alt="Logo"
-            // style={{ width: "100px" }}
+            style={{ cursor:"pointer" }}
           />
           <div className="navOptions">
             <Button
@@ -166,7 +166,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1em"
+              fontSize="1.2em"
             >
               Home
             </Button>
@@ -177,7 +177,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1em"
+              fontSize="1.2em"
             >
               About
             </Button>
@@ -188,7 +188,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1em"
+              fontSize="1.2em"
             >
               Skills
             </Button>
@@ -199,7 +199,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1em"
+              fontSize="1.2em"
             >
               Projects
             </Button>
@@ -210,7 +210,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1em"
+              fontSize="1.2em"
             >
               Contact
             </Button>
@@ -230,7 +230,7 @@ export const Navbar = () => {
               backgroundColor: "white",
               color: "secondary.500",
             }}
-            fontSize="1em"
+            fontSize="1.2em"
             bg={"secondary.500"}
             color="white"
           >
