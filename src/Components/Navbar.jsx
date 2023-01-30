@@ -32,7 +32,7 @@ const Nav = styled.div`
 
   .navContainer {
     background-color: #331551;
-    height: 10vh;
+    height: 70px;
     width: 100%;
   }
   .navWrapper {
@@ -51,17 +51,22 @@ const Nav = styled.div`
     display: flex;
     flex-direction:row;
     gap: 50px;
+    flex-wrap:nowrap;
     margin-left:7.5em;
+    
   }
   .navLogo {
     margin-top:5px;
     width:6em;
   }
 
-  @media all and (min-width: 768px) and (max-width: 992px){
+  @media all and (min-width: 768px) and (max-width: 1024px){
     font-size: 0.8em;
     .navWrapper{
       width:90vw;
+    }
+    .navOptions{
+      font-size: small;
     }
     .navLogo{
       width: 6em;
@@ -82,16 +87,17 @@ const Nav = styled.div`
   }
 `;
 
+export const downloadFile = () => {
+  saveAs(
+    "https://drive.google.com/file/d/1dDJVvX6T34nDahS8Crom5zksrP-PNo99/view?usp=sharing"
+  );
+};
+
 export const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
   const navBtn = {};
 
-  const downloadFile = () => {
-    saveAs(
-      "https://drive.google.com/file/d/1dDJVvX6T34nDahS8Crom5zksrP-PNo99/view?usp=sharing"
-    );
-  };
 
   return (
     <Nav>
@@ -121,7 +127,7 @@ export const Navbar = () => {
               </DrawerHeader>
 
               <DrawerBody>
-                <Flex flexDir={"column"} h="70%" gap="20px" fontWeight={"600"}>
+                <Flex flexDir={"column"} h="70%" gap="20px" fontWeight={"600"} >
                   <Box>Home</Box>
                   <Box>About</Box>
                   <Box>Skills</Box>
@@ -221,16 +227,15 @@ export const Navbar = () => {
             
             {/* </Link> */}
           </div>
-          <Button
+          <Button size={{base:"sm", md:"md"}}
             rightIcon={<DownloadIcon />}
             onClick={downloadFile}
-            style={navBtn}
             variant="ghost"
             _hover={{
               backgroundColor: "white",
               color: "secondary.500",
             }}
-            fontSize="1.2em"
+            fontSize={{base:"1em", md:"1.2em", xl:"1.2em"}}
             bg={"secondary.500"}
             color="white"
           >

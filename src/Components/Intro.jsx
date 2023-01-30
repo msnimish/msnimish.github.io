@@ -2,16 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import heroImg from "../Assets/Images/hero.svg";
 import { TypeAnimation } from "react-type-animation";
+import { Button } from "@chakra-ui/react";
+import { DownloadIcon } from "@chakra-ui/icons";
+import { downloadFile } from "./Navbar.jsx";
 
 const IntroWrapper = styled.div`
   width:100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   // outline: 2px solid red;
 
   .introContainer{
     width: 75vw;
     margin: auto;
-    padding: 23vh 0px;
+    margin: 14vh auto 24vh;
     // border: 1px solid green;
   }
   .introContent{
@@ -19,22 +25,23 @@ const IntroWrapper = styled.div`
     width: 100%;
     margin:auto;
     flex-direction: row;
-    justify-content: flex-start;
+    // justify-content: flex-start;
     // border: 1px solid;
   }
   .descriptionBox{
-    width: 45vw;
-    height: 45vh;
+    width: 40%;
+    margin: 10% 0px 5%;
+    // height: 45vh;
   }
   .greetings{
-    font-size: 2em;
+    font-size: 2.5em;
     font-family: "Montserrat ExtraBold", "Times New Roman";
     margin:0px;
     color: #331551
   }
   .name{
     font-family: "Montserrat ExtraBold", "Times New Roman";
-    font-size: 2.5em;
+    font-size: 3em;
     background-size: 100%,
     background-clip: text;
     text-fill-color: transparent;
@@ -45,9 +52,10 @@ const IntroWrapper = styled.div`
     background-image: -webkit-linear-gradient(120deg, #F89337,#BF3130);
   }
   .role{
-    width: 60%;
+    width: 100%;
+    height: 110px;
     font-family: "Montserrat ExtraBold", "Times New Roman";
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 0px;
     color: #331551;
     z-index:10;
@@ -55,36 +63,80 @@ const IntroWrapper = styled.div`
   }
 
   .heroImageContainer{
-    width: 50%,
-    object-fit: fill;
+    width: 58%;
+    height: 100%;
+   
 
     // visibility:hidden;
   }
 
   .heroImageContainer>img{
-    width: 50%;
-    // height: 20%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     // display: none;
-    position: absolute;
-    top: 120px;
-    left: 40%;
-    z-index:5;
-    // outline: 1px solid green;
+    // position: absolute;
+    // top: 7.5em;
+    // left: 40%;
+    // z-index:5;
+    // outline: 1px solid red;
     // visibility:hidden;
   }
 
 
-  @media all and (min-width: 769px) and (max-width: 992px){
+  @media all and (min-width: 769px) and (max-width: 1024px){
     .introContainer{
       width: 90vw;
     }
     .introContent{
       margin: 5vw auto;
     }
+    .greetings{
+      font-size: 2em
+    }
+    .name{
+      font-size: 2.5em
+    }
+    .role{
+      font-size: 2em
+    }
   }
-  @media all and (min-width: 220px) and (max-width: 768px){
-    font-size: 0.8em;
+  @media all and (min-width: 480px) and (max-width: 768px){
+    .introContainer{
+      width: 90vw;
+      margin: 6vh auto 20vh;
+    }
+    .introContent{
+      margin: 5vw auto;
+    }
+    .greetings{
+      font-size: 1.4em
+    }
+    .name{
+      font-size: 1.8em
+    }
+    .role{
+      font-size: 1.4em
+    }
     
+  }
+  @media all and (min-width: 220px) and (max-width: 479px){
+    .introContainer{
+      margin: 16vh auto 34vh;
+    }
+    .descriptionBox{
+      width: 100%;
+      text-align:center;
+    }
+    .role{
+      height: 170px;
+    }
+    .heroImageContainer{
+      display:none;
+    }
+    .heroImageContainer>img{
+      display:none;
+    }
   }
 `;
 
@@ -109,8 +161,24 @@ const Intro = () => {
                 repeat={Infinity}
               />
             </div>
+            <Button
+              size={{ base: "lg", md: "lg" }}
+              rightIcon={<DownloadIcon />}
+              onClick={downloadFile}
+              variant="ghost"
+              _hover={{
+                backgroundColor: "white",
+                color: "secondary.500",
+              }}
+              fontSize={{ base: "1.6em", md: "1.4em", xl: "1.4em" }}
+              bg={"secondary.500"}
+              color="white"
+              mt="20px"
+            >
+              Resume
+            </Button>
           </div>
-          <div className="heroImageContainer" >
+          <div className="heroImageContainer">
             <img src={heroImg} alt="heroImage" />
           </div>
         </div>

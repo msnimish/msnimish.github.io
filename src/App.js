@@ -23,8 +23,8 @@ function App() {
       <Navbar style={{ position: "sticky", top: "0" }}></Navbar>
       <Intro></Intro>
       <About></About>
-      {/* <Skills></Skills>
-      <Projects></Projects>
+      <Skills></Skills>
+      {/* <Projects></Projects>
       <Stats></Stats>
       <Contact></Contact>
       <Footer></Footer>
