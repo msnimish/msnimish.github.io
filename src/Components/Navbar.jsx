@@ -32,7 +32,7 @@ const Nav = styled.div`
 
   .navContainer {
     background-color: #331551;
-    height: 70px;
+    height: 60px;
     width: 100%;
   }
   .navWrapper {
@@ -52,7 +52,7 @@ const Nav = styled.div`
     flex-direction:row;
     gap: 50px;
     flex-wrap:nowrap;
-    margin-left:7.5em;
+    // margin-left:7.5em;
     
   }
   .navLogo {
@@ -61,12 +61,11 @@ const Nav = styled.div`
   }
 
   @media all and (min-width: 768px) and (max-width: 1024px){
-    font-size: 0.8em;
     .navWrapper{
       width:90vw;
     }
     .navOptions{
-      font-size: small;
+      font-size: smaller;
     }
     .navLogo{
       width: 6em;
@@ -172,7 +171,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1.2em"
+              fontSize={{base:"1em",lg:"1.2em"}}
             >
               Home
             </Button>
@@ -183,7 +182,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1.2em"
+              fontSize={{base:"1em",lg:"1.2em"}}
             >
               About
             </Button>
@@ -194,7 +193,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1.2em"
+              fontSize={{base:"1em",lg:"1.2em"}}
             >
               Skills
             </Button>
@@ -205,7 +204,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1.2em"
+              fontSize={{base:"1em",lg:"1.2em"}}
             >
               Projects
             </Button>
@@ -216,7 +215,7 @@ export const Navbar = () => {
               }}
               style={navBtn}
               variant="ghost"
-              fontSize="1.2em"
+              fontSize={{base:"1em",lg:"1.2em"}}
             >
               Contact
             </Button>
@@ -235,7 +234,7 @@ export const Navbar = () => {
               backgroundColor: "white",
               color: "secondary.500",
             }}
-            fontSize={{base:"1em", md:"1.2em", xl:"1.2em"}}
+            fontSize={{base:"1em", xl:"1.2em"}}
             bg={"secondary.500"}
             color="white"
           >

@@ -13,6 +13,7 @@ import styled from "styled-components";
 
 const PageContainer = styled.div`
   width: 100vw;
+  font-family: Montserrat;
 `;
 
 function App() {
@@ -25,9 +26,9 @@ function App() {
       <About></About>
       <Skills></Skills>
       {/* <Projects></Projects>
-      <Stats></Stats>
+      <Stats></Stats> */}
       <Contact></Contact>
-      <Footer></Footer>
+      {/* <Footer></Footer>
       <Chatbot></Chatbot> */}
       {/* <Dummy></Dummy> */}
     </PageContainer>

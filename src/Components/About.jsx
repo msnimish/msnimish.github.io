@@ -50,7 +50,7 @@ const About = () => {
           <Text
             color="white"
             fontWeight={"400"}
-            fontSize={{ base: "1em",sm:"1.2em", md: "1.2em", xl: "2em" }}
+            fontSize={{ base: "1em",sm:"1em", md: "1em", xl: "2em" }}
             textAlign={{ base: "left", md: "justify" }}
           >
             As a self-motivated aspiring web developer, I am constantly seeking

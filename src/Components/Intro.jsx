@@ -11,15 +11,17 @@ const IntroWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height:100vh;
 
   // outline: 2px solid red;
 
   .introContainer{
     width: 75vw;
     margin: auto;
-    margin: 14vh auto 24vh;
+    margin: 5vh auto 22vh;
     // border: 1px solid green;
   }
+
   .introContent{
     display: flex;
     width: 100%;
@@ -34,14 +36,14 @@ const IntroWrapper = styled.div`
     // height: 45vh;
   }
   .greetings{
-    font-size: 2.5em;
+    font-size: 2em;
     font-family: "Montserrat ExtraBold", "Times New Roman";
     margin:0px;
     color: #331551
   }
   .name{
     font-family: "Montserrat ExtraBold", "Times New Roman";
-    font-size: 3em;
+    font-size: 2.5em;
     background-size: 100%,
     background-clip: text;
     text-fill-color: transparent;
@@ -55,7 +57,7 @@ const IntroWrapper = styled.div`
     width: 100%;
     height: 110px;
     font-family: "Montserrat ExtraBold", "Times New Roman";
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 0px;
     color: #331551;
     z-index:10;
@@ -74,6 +76,7 @@ const IntroWrapper = styled.div`
     width: 100%;
     height: 100%;
     object-fit: contain;
+    margin-top: 50px;
     // display: none;
     // position: absolute;
     // top: 7.5em;
@@ -83,22 +86,33 @@ const IntroWrapper = styled.div`
     // visibility:hidden;
   }
 
+  @media all and (min-width: 1025px){
+    .greetings{
+      font-size: 2.5em
+    }
+    .name{
+      font-size: 3em
+    }
+    .role{
+      font-size: 2.5em
+    }
+  }
 
   @media all and (min-width: 769px) and (max-width: 1024px){
     .introContainer{
       width: 90vw;
     }
     .introContent{
-      margin: 5vw auto;
+      margin: auto;
     }
     .greetings{
-      font-size: 2em
+      font-size: 1.7em
     }
     .name{
-      font-size: 2.5em
+      font-size: 2em
     }
     .role{
-      font-size: 2em
+      font-size: 1.7em
     }
   }
   @media all and (min-width: 480px) and (max-width: 768px){
@@ -162,7 +176,7 @@ const Intro = () => {
               />
             </div>
             <Button
-              size={{ base: "lg", md: "lg" }}
+              size={{ base: "lg", md: "md" }}
               rightIcon={<DownloadIcon />}
               onClick={downloadFile}
               variant="ghost"
@@ -170,10 +184,11 @@ const Intro = () => {
                 backgroundColor: "white",
                 color: "secondary.500",
               }}
-              fontSize={{ base: "1.6em", md: "1.4em", xl: "1.4em" }}
+              fontSize={{ base: "2em", md: "1.2em",lg:"1.4em", xl: "1.4em" }}
               bg={"secondary.500"}
               color="white"
-              mt="20px"
+              mt={{base:"0px", sm:"200px", md:"0px",lg:"0px",xl:"20px"}}
+              // mt="20px"
             >
               Resume
             </Button>

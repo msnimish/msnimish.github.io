@@ -64,8 +64,8 @@ const Skills = () => {
         <Heading fontSize={{base:"2em",lg:"2.5em"}} mb="20px" textAlign={"center"}>Skills</Heading>
         <Flex  p={{base:"20px 20px 20px 0px",lg:"50px 50px 50px 0px"}} >
             <Flex flexDir={"row"} gap={{base:"20px",md:"25px",lg:"50px"}} flexWrap={"wrap"} justifyContent="center">
-              {data && data.map((el)=>(
-              <Box display={"flex"} flexDir="column" alignItems={"center"} gap={{base:"10px",md:'20px', lg:"30px"}} w={{base:"5em",md:"7em", lg:"10em"}} p={{base:"15px 12.5px 10px",lg:"30px 25px 20px"}} borderRadius={{base:"10px",lg:"20px"}} boxShadow = "md" bg="white">
+              {data && data.map((el,i)=>(
+              <Box key={i} display={"flex"} flexDir="column" alignItems={"center"} gap={{base:"10px",md:'20px', lg:"30px"}} w={{base:"5em",md:"7em", lg:"10em"}} p={{base:"15px 12.5px 10px",lg:"30px 25px 20px"}} borderRadius={{base:"10px",lg:"20px"}} boxShadow = "md" bg="white">
                 <Image src={`${el.logo}`} alt="skill" width={{base:"25px",md:"45px", lg:"60px"}} height={{base:"25px",md:"45px", lg:"60px"}} ></Image>
                 {/* <Progress value={el.value} colorScheme="primary" size="sm" borderRadius={"5px"}/> */}
                 <Heading fontSize={{base:"0.75em",lg:"1.2em"}} m="auto" mb ={{base:"auto",md:"10px",lg:"10px"}} color="gray.600" textAlign={"center"}>{el.name}</Heading>
