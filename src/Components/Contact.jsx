@@ -21,7 +21,7 @@ const Contact = () => {
       justifyContent={"flex-end"}
     >
       {/* <Image src={contactBG} position="absolute" w="100vw" h="100vh"/> */}
-      <Flex w="50%" flexDir="column" gap={"50px"} justifyContent="center" m="100px 0px 100px 0px">
+      <Flex w="50%" flexDir="column" gap={"50px"} justifyContent="center" m="100px 0px 100px 0px" alignItems={"center"}>
         <Heading color={"white"}>Contact me</Heading>
         <Flex alignItems={"center"} gap="20px">
           <Image
@@ -56,7 +56,7 @@ const Contact = () => {
           </Text>
         </Flex>
         <Heading fontSize="1.6em" color="white">Other Platforms</Heading>
-        <Flex gap="30px">
+        <Flex gap="30px" mt="-20px">
           <Link href="https://github.com/msnimish" isExternal>
             <Image src={githubLogo} w="50px" _hover={{transform:"scale(105%)"}}></Image>
           </Link>
