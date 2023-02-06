@@ -1,10 +1,15 @@
 import { Box, Flex, Heading, Image, Link, Text } from "@chakra-ui/react";
+import Lottie from "lottie-react";
+import gitAnimationData from "../Assets/github.json"
+import linkedinAnimationData from "../Assets/linkedinAnimation.json"
+
 import React from "react";
 import contactBG from "../Assets/Images/contactBg.svg";
 import githubLogo from "../Assets/Images/github.svg";
 import linkedinLogo from "../Assets/Images/linkedin.svg";
 
 const Contact = () => {
+
   return (
     <Flex
       w={"99vw"}
@@ -56,12 +61,14 @@ const Contact = () => {
           </Text>
         </Flex>
         <Heading fontSize="1.6em" color="white">Other Platforms</Heading>
-        <Flex gap="30px" mt="-20px">
+        <Flex mt="-20px">
           <Link href="https://github.com/msnimish" isExternal>
-            <Image src={githubLogo} w="50px" _hover={{transform:"scale(105%)"}}></Image>
+            {/* <Image src={githubLogo} w="50px" _hover={{transform:"scale(105%)"}}></Image> */}
+            <Lottie animationData={gitAnimationData} style={{width:"100px", height:"100px"}} loop={true} />
           </Link>
           <Link href="https://www.linkedin.com/in/msnimish/" isExternal>
-            <Image  src={linkedinLogo} w="50px" _hover={{transform:"scale(105%)"}}></Image>
+            {/* <Image  src={linkedinLogo} w="50px" _hover={{transform:"scale(105%)"}}></Image> */}
+            <Lottie animationData={linkedinAnimationData} style={{width:"65px", height:"65px", backgroundColor:"white", borderRadius:"20px", padding:"15px",margin:"15px"}} loop={true} />
           </Link>
         </Flex>
       </Flex>
