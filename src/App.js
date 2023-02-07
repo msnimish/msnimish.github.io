@@ -12,7 +12,7 @@ import styled from "styled-components";
 
 
 const PageContainer = styled.div`
-  width: 100vw;
+  width: 98.5vw;
   font-family: Montserrat;
 `;
 

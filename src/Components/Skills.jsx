@@ -59,7 +59,7 @@ const Skills = () => {
 ])
 
   return (
-    <Flex w="99vw" bg="primary.100" >
+    <Flex w="98.5vw" bg="primary.100" >
       <Flex w={{base:"90vw",md:"90vw",lg:"75vw"}} margin={{base:"40px auto",lg:"100px auto"}} flexDirection={"column"}>
         <Heading fontSize={{base:"2em",lg:"2.5em"}} mb="20px" textAlign={"center"}>Skills</Heading>
         <Flex  p={{base:"20px 20px 20px 0px",lg:"50px 50px 50px 0px"}} >

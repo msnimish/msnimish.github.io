@@ -26,7 +26,7 @@ const Nav = styled.div`
   position: sticky;
   top: 0;
   z-index: 10;
-  width: 100vw;
+  width: 100%;
   background-color: #331551;
   // outline: 2px solid green;
 

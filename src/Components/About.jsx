@@ -6,7 +6,7 @@ import ProfilePic from "../Assets/Images/AboutPhoto.png";
 const About = () => {
   return (
     <Flex
-      w={"99vw"}
+      w={"98.5vw"}
       bgImage={AboutBg}
       objectFit="contain"
       bgRepeat={"no-repeat"}

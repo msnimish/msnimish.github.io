@@ -7,7 +7,7 @@ import { DownloadIcon } from "@chakra-ui/icons";
 import { downloadFile } from "./Navbar.jsx";
 
 const IntroWrapper = styled.div`
-  width:100vw;
+  width:98.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
