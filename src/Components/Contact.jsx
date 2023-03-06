@@ -13,22 +13,15 @@ const Contact = () => {
   return (
     <Flex
       w={"98.5vw"}
-      // bgImage={contactBG}
-      // objectFit="cover"
-      // bgRepeat={"no-repeat"}
-      // bgSize="contain"
       overflow={"hidden"}
+      position="relative"
       flexDir={"row"}
-      // p="50px auto"
-      // h="90vh"
-      // zIndex={"10"}
-      // p="50px"
       justifyContent={"flex-end"}
     >
-      <Image src={contactBG} position="absolute" w="98.5vw" h={{lg:"92vh",xl:"92vh"}} left="0" objectFit={"cover"}/>
-      <Flex w="50%" flexDir="column" gap={{lg:"20px",xl:"50px"}} justifyContent="center" mt={{base:"100px",lg:"100px",xl:"100px"}} alignItems={"center"} zIndex="5"
+      <Image src={contactBG} position="absolute" w="100%" left="0" objectFit={"cover"}/>
+      <Flex w="50%" flexDir="column" gap={{lg:"20px",xl:"50px"}} justifyContent="center" mt={{base:"100px"}} alignItems={"center"} zIndex="5" mb="50px"
       >
-        <Heading color={"white"} fontSize={{base:"1em",lg:"1.8em",xl:"2em"}}>Contact me</Heading>
+        <Heading color={"white"} fontSize={{base:"1em",lg:"2em",xl:"2.5em"}}>Contact me</Heading>
         <Flex alignItems={"center"} gap="20px">
           <Image
             src={

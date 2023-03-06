@@ -17,6 +17,8 @@ const PageContainer = styled.div`
 `;
 
 function App() {
+
+  console.log(process.env.DB_URL);
   
   return (
     <PageContainer>
@@ -25,8 +27,8 @@ function App() {
       <Intro></Intro>
       <About></About>
       <Skills></Skills>
-      {/* <Projects></Projects>
-      <Stats></Stats> */}
+      <Projects></Projects>
+      {/* <Stats></Stats> */}
       <Contact></Contact>
       {/* <Footer></Footer>
       <Chatbot></Chatbot> */}
