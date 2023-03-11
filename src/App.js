@@ -9,6 +9,8 @@ import Skills from "./Components/Skills";
 import Intro from "./Components/Intro";
 import Stats from "./Components/Stats";
 import styled from "styled-components";
+import { useRef } from "react";
+
 
 
 const PageContainer = styled.div`
@@ -17,19 +19,39 @@ const PageContainer = styled.div`
 `;
 
 function App() {
+  const contact = useRef(null);
+  const intro = useRef(null);
+  const about = useRef(null);
+  const projects = useRef(null);
+  const skills = useRef(null);
 
-  console.log(process.env.DB_URL);
-  
+  const scrollToView = (e) => {
+    if(e.target.innerText==="Home"){
+      intro.current.scrollIntoView({behaviour: "smooth"});
+    }
+    if(e.target.innerText==="About"){
+      about.current.scrollIntoView({behaviour: "smooth"});
+    }
+    if(e.target.innerText==="Projects"){
+      projects.current.scrollIntoView({behaviour: "smooth"});
+    }
+    if(e.target.innerText==="Skills"){
+      skills.current.scrollIntoView({behaviour: "smooth"});
+    }
+    if(e.target.innerText==="Contact"){
+      contact.current.scrollIntoView({behaviour: "smooth"});
+    }
+  }
   return (
-    <PageContainer>
+    <PageContainer id="containerElement">
       {/* <Home></Home> */}
-      <Navbar style={{ position: "sticky", top: "0" }}></Navbar>
-      <Intro></Intro>
-      <About></About>
-      <Skills></Skills>
-      <Projects></Projects>
+      <Navbar style={{ position: "sticky", top: "0" }} scroll={scrollToView}></Navbar>
+      <Intro ref={intro}></Intro>
+      <About ref={about}></About>
+      <Projects ref={projects}></Projects>
+      <Skills ref={skills}></Skills>
       {/* <Stats></Stats> */}
-      <Contact></Contact>
+      <Contact ref={contact}></Contact>
       {/* <Footer></Footer>
       <Chatbot></Chatbot> */}
       {/* <Dummy></Dummy> */}

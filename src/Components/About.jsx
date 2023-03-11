@@ -1,9 +1,9 @@
 import { Container, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { forwardRef } from "react";
 import AboutBg from "../Assets/AboutBG.svg";
 import ProfilePic from "../Assets/Images/AboutPhoto.png";
 
-const About = () => {
+const About = forwardRef(({scroll},ref) => {
   return (
     <Flex
       w={"98.5vw"}
@@ -14,12 +14,14 @@ const About = () => {
       overflow={"hidden"}
       flexDir={"column"}
       p="50px auto"
+      ref={ref}
     >
       <Heading
         color="white"
         fontWeight={"900"}
-        fontSize={{ base: "1em",sm:"1.5em", md: "2em", lg:"3em" }}
+        fontSize={{base:"2em", md:"3em"}}
         textShadow="2px 2px 5px #434343"
+
         m={{base:"1em auto 0px",md:"1.5em auto 0px",lg:"2.5em auto 0px"}}
       >
         About me
@@ -31,7 +33,7 @@ const About = () => {
         flexDirection={{ base: "column", md: "row" }}
         gap={{ base: "0px",sm:"20px", lg: "40px" }}
       >
-        <Flex w={{ base: "55%", md: "30%" }} p={{ base: "10px 50px 10px",md:"0px" }} m="auto">
+        <Flex w={{ base: "85%", md: "30%" }} p={{ base: "10px 50px 10px",md:"0px" }} m="auto">
           {/* <Image src={ProfilePic} w={"100%"} transform={"rotate(-5deg)"} position="absolute"/> */}
           <Image
             src={ProfilePic}
@@ -50,8 +52,8 @@ const About = () => {
           <Text
             color="white"
             fontWeight={"400"}
-            fontSize={{ base: "1em",sm:"1em", md: "1em", xl: "2em" }}
-            textAlign={{ base: "left", md: "justify" }}
+            fontSize={{ base: "1em",sm:"1em", md: "1em",lg:"1em",xl: "2em" }}
+            textAlign={{ base: "justify", md: "justify" }}
           >
             As a self-motivated aspiring web developer, I am constantly seeking
             out new challenges and opportunities to expand my skills and
@@ -72,6 +74,6 @@ const About = () => {
       </Flex>
     </Flex>
   );
-};
+});
 
 export default About;

@@ -3,12 +3,12 @@ import Lottie from "lottie-react";
 import gitAnimationData from "../Assets/github.json"
 import linkedinAnimationData from "../Assets/linkedinAnimation.json"
 
-import React from "react";
+import React, { forwardRef } from "react";
 import contactBG from "../Assets/Images/contactBg.svg";
 import githubLogo from "../Assets/Images/github.svg";
 import linkedinLogo from "../Assets/Images/linkedin.svg";
 
-const Contact = () => {
+const Contact = forwardRef(({scroll},ref) => {
 
   return (
     <Flex
@@ -16,23 +16,27 @@ const Contact = () => {
       overflow={"hidden"}
       position="relative"
       flexDir={"row"}
-      justifyContent={"flex-end"}
+      justifyContent={{base:"center", md:"flex-end"}}
+      backgroundColor={{base:"secondary.500", md:""}}
+      backgroundImage={{base:"", md:contactBG}}
+      backgroundSize="cover"
+      ref={ref}
     >
-      <Image src={contactBG} position="absolute" w="100%" left="0" objectFit={"cover"}/>
-      <Flex w="50%" flexDir="column" gap={{lg:"20px",xl:"50px"}} justifyContent="center" mt={{base:"100px"}} alignItems={"center"} zIndex="5" mb="50px"
+      {/* <Image src={contactBG} position="absolute" w="100%" left="0" objectFit={"fill"}/> */}
+      <Flex w={{base:"80%", md:"50%"}} flexDir="column" gap={{base:"20px", lg:"20px",xl:"50px"}} justifyContent="center" mt={{base:"100px"}} alignItems={"center"} zIndex="5" mb="50px"
       >
-        <Heading color={"white"} fontSize={{base:"1em",lg:"2em",xl:"2.5em"}}>Contact me</Heading>
+        <Heading color={"white"} fontSize={{base:"2em",lg:"2em",xl:"2.5em"}}>Contact me</Heading>
         <Flex alignItems={"center"} gap="20px">
           <Image
             src={
               "https://cdn.iconscout.com/icon/free/png-512/gmail-30-722694.png?w=256&f=avif"
             }
-            w={{base:"50px",lg:"30px",xl:"50px"}}
+            w={{base:"25px",lg:"30px",xl:"50px"}}
           />
           <Text
             fontWeight={"600"}
             color="white"
-            fontSize={{lg:"1.1em",xl:"1.4em"}}
+            fontSize={{base:"0.7em",lg:"1.1em",xl:"1.4em"}}
             letterSpacing={"2px"}
           >
             msnimish24@gmail.com
@@ -43,15 +47,15 @@ const Contact = () => {
             src={
               "https://cdn.iconscout.com/icon/free/png-512/whatsapp-136-498413.png?w=256&f=avif"
             }
-            w={{base:"50px",lg:"30px",xl:"50px"}}
+            w={{base:"25px",lg:"30px",xl:"50px"}}
           />
           <Text
             fontWeight={"600"}
             color="white"
-            fontSize={{lg:"1.1em",xl:"1.4em"}}
+            fontSize={{base:"0.7em",lg:"1.1em",xl:"1.4em"}}
             letterSpacing={"2px"}
           >
-            +91 8879453525
+            {"+91 8879453525"}
           </Text>
         </Flex>
         <Heading fontSize={{base:"1em",lg:"1.5em",xl:"1.8em"}} color="white">Other Platforms</Heading>
@@ -68,6 +72,6 @@ const Contact = () => {
       </Flex>
     </Flex>
   );
-};
+});
 
 export default Contact;

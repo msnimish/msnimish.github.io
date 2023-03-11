@@ -1,6 +1,6 @@
 import { Box, Button, Container, Flex, Heading, HStack, Image, Tag, Text, VStack,Link  } from '@chakra-ui/react';
 import { Carousel, LeftButton, Provider, RightButton } from 'chakra-ui-carousel';
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { capsFirst } from '../utils';
 import ChakraCarousel from './ChakraCarousel';
 import credBee from "../Assets/credbee.png";
@@ -32,7 +32,7 @@ const styles={
 const projects = [
   {
     title:"StyleNova",
-    description:"Style Nova is an ecommerce website, that brings together multiple concepts under one roof – Apparel, Footwear, Children’s Wear, Beauty & Accessories offering a convenient one stop shop and a choice of leading national & international brands to customers",
+    description:"Style Nova is an ecommerce website, that brings together multiple concepts under one roof – Apparel, Footwear, Children’s Wear, Beauty & Accessories offering a convenient one stop shop",
     liveLink:"https://stylenova.netlify.app/",
     github:"https://github.com/msnimish/active-art-8329",
     image:styleNova,
@@ -68,7 +68,7 @@ const projects = [
   }
 ]
 
-const Projects = () => {
+const Projects = forwardRef(({scroll},ref) => {
   return (
     <Container
         py={8}
@@ -76,9 +76,11 @@ const Projects = () => {
         m="auto"
         maxW="75vw"
         mb="100px"
+        ref={ref}
       >
-        <Heading my="50px" fontSize="3em" textAlign="center">Projects</Heading>
-        <ChakraCarousel gap={32}>
+        <Heading mt={{base:"5px",md:"50px"}} fontSize={{base:"2em", md:"3em"}} textAlign="center">{`Projects`}</Heading>
+        <Text mb={{base:"5px",md:"50px"}} textAlign={"center"}>{`(${projects.length} projects)`}</Text>
+        <ChakraCarousel gap={5}>
           {projects?.map((project, i) => (
             <Flex
               key={i}
@@ -87,7 +89,7 @@ const Projects = () => {
               // gap="20px"
               textAlign={"center"}
               // border="10px solid"
-              maxW="36vw"
+              maxW={{base:"", md:"36vw"}}
               flexDirection="column"
               overflow="hidden"
               color="primary.400"
@@ -97,9 +99,9 @@ const Projects = () => {
               // p={5}
             >
               <Flex maxH="45%" boxShadow="rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"><Image src={project.image} w="100%"></Image></Flex>
-              <Heading pl="20px">{project.title}</Heading>
-              <Text px="50px">{project.description}</Text>
-              <Text pl="20px" fontWeight={"600"}>Tech Stacks: </Text>
+              <Heading size="md" pt="20px">{`${i+1}. ${project.title}`}</Heading>
+              <Text px={{base:"15px", md:"50px"}}>{project.description}</Text>
+              <Text fontWeight={"600"}>Tech Stacks: </Text>
               <Flex flexWrap="wrap" gap="15px" justifyContent="center">
               {project.techStacks.map((tech,j)=>(
                 <VStack w="80px" justifyContent={"space-between"} key={j} boxShadow="rgba(0, 0, 0, 0.16) 2px 3px 4px, rgba(0, 0, 0, 0.23) 2px 3px 4px" p={"10px"} borderRadius="10px">
@@ -108,14 +110,14 @@ const Projects = () => {
                 </VStack>
               ))}
               </Flex>
-              <Flex justifyContent={"space-around"} my="30px">
-                <Button bgImage={"linear-gradient(60deg, #F89337,#BF3130)"} _hover={{transform:"scale(1.1)"}} color="white">
+              <Flex justifyContent={"space-around"} my="30px" flexDirection={{base:"column", md:"row"}}>
+                <Button bgImage={"linear-gradient(60deg, #F89337,#BF3130)"} _hover={{transform:"scale(1.1)"}} color="white" m="10px">
                   <Link href={project.liveLink}  _hover={{textDecoration:"none"}}>Live Link</Link>
                 </Button>
                 {/* <Button bgImage={"linear-gradient(120deg, #F89337,#BF3130)"} _hover={{transform:"scale(1.1)"}} color="black" > */}
-                  <Link href={project.github} display="flex" alignItems="center"_hover={{textDecoration:"none", transform:"scale(1.1)"}} flexDir="row">
+                  <Link href={project.github} display="flex" justifyContent={"center"} alignItems="center"_hover={{textDecoration:"none", transform:"scale(1.1)"}} flexDir="row">
                     <Lottie animationData={gitAnimationData} style={{width:"60px", height:"60px"}} loop={true}/>
-                    <Text fontWeight={"600"}>Github</Text>
+                    <Text fontWeight={"600"}>Code Base</Text>
                   </Link>
                 {/* </Button> */}
               </Flex>
@@ -124,6 +126,6 @@ const Projects = () => {
         </ChakraCarousel>
       </Container>
   )
-}
+})
 
 export default Projects

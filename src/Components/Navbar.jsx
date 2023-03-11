@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import React, { forwardRef, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Home from "./Home/Home";
 import Projects from "./Projects";
 import Logo from "../Assets/MSN.svg";
+import { Link } from "react-scroll";
 import {
   Button,
   useDisclosure,
@@ -47,10 +47,11 @@ const Nav = styled.div`
     background-color: #331551;
   }
   .navOptions {
-    width=100%
-    display: flex;
+    width:60vw;
+    display:flex;
     flex-direction:row;
     gap: 50px;
+    // background-color: red;
     flex-wrap:nowrap;
     // margin-left:7.5em;
     
@@ -92,10 +93,9 @@ export const downloadFile = () => {
   );
 };
 
-export const Navbar = () => {
+export const Navbar = forwardRef(({scroll}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
-  const navBtn = {};
 
 
   return (
@@ -127,11 +127,11 @@ export const Navbar = () => {
 
               <DrawerBody>
                 <Flex flexDir={"column"} h="70%" gap="20px" fontWeight={"600"} >
-                  <Box>Home</Box>
-                  <Box>About</Box>
-                  <Box>Skills</Box>
-                  <Box>Projects</Box>
-                  <Box>Contact</Box>
+                  <Box onClick={scroll}>Home</Box>
+                  <Box onClick={scroll}>About</Box>
+                  <Box onClick={scroll}>Skills</Box>
+                  <Box onClick={scroll}>Projects</Box>
+                  <Box onClick={scroll}>Contact</Box>
                 </Flex>
               </DrawerBody>
 
@@ -142,8 +142,6 @@ export const Navbar = () => {
                 <Button
                   rightIcon={<DownloadIcon />}
                   onClick={downloadFile}
-                  style={navBtn}
-                  variant="ghost"
                   _hover={{
                     backgroundColor: "white",
                     color: "secondary.500",
@@ -164,61 +162,62 @@ export const Navbar = () => {
             style={{ cursor:"pointer" }}
           />
           <div className="navOptions">
-            <Button
+            <Box
+              fontSize={{base:"1em",lg:"1.2em"}}
               _hover={{
                 backgroundColor: "transparent",
                 color: "primary.300",
               }}
-              style={navBtn}
-              variant="ghost"
-              fontSize={{base:"1em",lg:"1.2em"}}
+              cursor="pointer"
+              onClick={scroll}
             >
               Home
-            </Button>
-            <Button
+              
+            </Box>
+            <Box
               _hover={{
                 backgroundColor: "transparent",
                 color: "primary.300",
               }}
-              style={navBtn}
-              variant="ghost"
               fontSize={{base:"1em",lg:"1.2em"}}
+              cursor="pointer"
+              onClick={scroll}
             >
               About
-            </Button>
-            <Button
+            </Box>
+            <Box
               _hover={{
                 backgroundColor: "transparent",
                 color: "primary.300",
               }}
-              style={navBtn}
-              variant="ghost"
               fontSize={{base:"1em",lg:"1.2em"}}
+              cursor="pointer"
+              onClick={scroll}
             >
               Skills
-            </Button>
-            <Button
+            </Box>
+            <Box
               _hover={{
                 backgroundColor: "transparent",
                 color: "primary.300",
               }}
-              style={navBtn}
-              variant="ghost"
               fontSize={{base:"1em",lg:"1.2em"}}
+              cursor="pointer"
+              onClick={scroll}
             >
               Projects
-            </Button>
-            <Button
+            </Box>
+            <Box
               _hover={{
                 backgroundColor: "transparent",
                 color: "primary.300",
               }}
-              style={navBtn}
-              variant="ghost"
               fontSize={{base:"1em",lg:"1.2em"}}
+              cursor="pointer"
+              onClick={scroll}
             >
               Contact
-            </Button>
+            </Box>
             {/* <Link
               src="https://drive.google.com/file/d/1dDJVvX6T34nDahS8Crom5zksrP-PNo99/view?usp=sharing"
               download
@@ -229,7 +228,6 @@ export const Navbar = () => {
           <Button size={{base:"sm", md:"md"}}
             rightIcon={<DownloadIcon />}
             onClick={downloadFile}
-            variant="ghost"
             _hover={{
               backgroundColor: "white",
               color: "secondary.500",
@@ -244,4 +242,4 @@ export const Navbar = () => {
       </div>
     </Nav>
   );
-};
+});

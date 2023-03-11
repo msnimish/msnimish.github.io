@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import heroImg from "../Assets/Images/hero.svg";
 import { TypeAnimation } from "react-type-animation";
@@ -136,7 +136,7 @@ const IntroWrapper = styled.div`
   }
   @media all and (min-width: 220px) and (max-width: 479px){
     .introContainer{
-      margin: 16vh auto 34vh;
+      margin:60vw auto 34vh;
     }
     .descriptionBox{
       width: 100%;
@@ -154,9 +154,9 @@ const IntroWrapper = styled.div`
   }
 `;
 
-const Intro = () => {
+const Intro = forwardRef(({scroll},ref) => {
   return (
-    <IntroWrapper>
+    <IntroWrapper ref={ref}>
       <div className="introContainer">
         <div className="introContent">
           <div className="descriptionBox">
@@ -200,6 +200,6 @@ const Intro = () => {
       </div>
     </IntroWrapper>
   );
-};
+});
 
 export default Intro;

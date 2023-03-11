@@ -1,8 +1,8 @@
 import { Flex, Heading, chakra, Text, Box, Progress, Image } from '@chakra-ui/react'
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useState } from 'react'
 
-const Skills = () => {
+const Skills = forwardRef(({scroll},ref) => {
   const [data, setData] = useState([{
     name: "HTML",
     logo: "https://cdn.iconscout.com/icon/free/png-512/html-2752158-2284975.png?w=256&f=avif",
@@ -59,7 +59,7 @@ const Skills = () => {
 ])
 
   return (
-    <Flex w="98.5vw" bg="primary.100" >
+    <Flex w="98.5vw" bg="primary.100" ref={ref} >
       <Flex w={{base:"90vw",md:"90vw",lg:"75vw"}} margin={{base:"40px auto",lg:"100px auto"}} flexDirection={"column"}>
         <Heading fontSize={{base:"2em",lg:"2.5em"}} mb="20px" textAlign={"center"}>Skills</Heading>
         <Flex  p={{base:"20px 20px 20px 0px",lg:"50px 50px 50px 0px"}} >
@@ -76,7 +76,7 @@ const Skills = () => {
       </Flex>
     </Flex>
   )
-}
+})
 
 export default Skills;
 
