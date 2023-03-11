@@ -97,6 +97,11 @@ export const Navbar = forwardRef(({scroll}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 
+  const drawerScroll = (e) => {
+    onClose();
+    scroll(e);
+  }
+
 
   return (
     <Nav>
@@ -127,11 +132,11 @@ export const Navbar = forwardRef(({scroll}) => {
 
               <DrawerBody>
                 <Flex flexDir={"column"} h="70%" gap="20px" fontWeight={"600"} >
-                  <Box onClick={scroll}>Home</Box>
-                  <Box onClick={scroll}>About</Box>
-                  <Box onClick={scroll}>Skills</Box>
-                  <Box onClick={scroll}>Projects</Box>
-                  <Box onClick={scroll}>Contact</Box>
+                  <Box onClick={drawerScroll} _hover={{backgroundColor:"primary.600"}}>Home</Box>
+                  <Box onClick={drawerScroll} _hover={{backgroundColor:"primary.600"}}>About</Box>
+                  <Box onClick={drawerScroll} _hover={{backgroundColor:"primary.600"}}>Skills</Box>
+                  <Box onClick={drawerScroll} _hover={{backgroundColor:"primary.600"}}>Projects</Box>
+                  <Box onClick={drawerScroll} _hover={{backgroundColor:"primary.600"}}>Contact</Box>
                 </Flex>
               </DrawerBody>
 

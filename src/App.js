@@ -26,6 +26,7 @@ function App() {
   const skills = useRef(null);
 
   const scrollToView = (e) => {
+    console.log(e);
     if(e.target.innerText==="Home"){
       intro.current.scrollIntoView({behaviour: "smooth"});
     }
