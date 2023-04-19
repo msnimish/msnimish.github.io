@@ -53,7 +53,7 @@ const Nav = styled.div`
     gap: 50px;
     // background-color: red;
     flex-wrap:nowrap;
-    // margin-left:7.5em;
+    margin-left:2em; 
     
   }
   .navLogo {

@@ -42,7 +42,7 @@ const projects = [
   {
     title:"Next-In",
     description:"Next-In is a productivity tool option. Manage your team's project from anywhere and collaborate with them in real time.",
-    liveLink:"https://next-in-two.vercel.app/",
+    liveLink:"https://next-in-silk.vercel.app/",
     github:"https://github.com/msnimish/next-in-productivity-chatApp",
     image:nextIn,
     techStacks:["NextJS","NodeJS","MongoDB", "ExpressJS","Socket.io","ChakraUI"],
